@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/imviewBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/board" />
+
+    <ImageButton
+        android:id="@+id/imbtnTL"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="2.5dp"
+        android:layout_marginTop="2.5dp"
+        app:layout_constraintStart_toStartOf="@+id/imviewBoard"
+        app:layout_constraintTop_toTopOf="@+id/imviewBoard"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/imbtnTM"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="14.5dp"
+        android:layout_marginTop="2.5dp"
+        app:layout_constraintStart_toEndOf="@+id/imbtnTL"
+        app:layout_constraintTop_toTopOf="@+id/imviewBoard"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/imbtnTR"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="14.5dp"
+        android:layout_marginTop="2.5dp"
+        app:layout_constraintStart_toEndOf="@+id/imbtnTM"
+        app:layout_constraintTop_toTopOf="@+id/imviewBoard"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/imbtnML"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="2.5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/imviewBoard"
+        app:layout_constraintTop_toBottomOf="@+id/imbtnTL"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/imbtnMM"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/imbtnML"
+        app:layout_constraintTop_toBottomOf="@+id/imbtnTM"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/imbtnMR"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/imbtnMM"
+        app:layout_constraintTop_toBottomOf="@+id/imbtnTR"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/imbtnBL"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="2.5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/imviewBoard"
+        app:layout_constraintTop_toBottomOf="@+id/imbtnML"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/imbtnBM"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/imbtnBL"
+        app:layout_constraintTop_toBottomOf="@+id/imbtnMM"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/imbtnBR"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/imbtnBM"
+        app:layout_constraintTop_toBottomOf="@+id/imbtnMR"
+        app:srcCompat="@drawable/black" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
