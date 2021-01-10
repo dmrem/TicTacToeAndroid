@@ -11,10 +11,11 @@
         android:id="@+id/imviewBoard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnResetGame"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvCurrentPlayer"
         app:srcCompat="@drawable/board" />
 
     <ImageButton
@@ -23,6 +24,7 @@
         android:layout_height="95dp"
         android:layout_marginStart="2.5dp"
         android:layout_marginTop="2.5dp"
+        android:onClick="clickTopLeft"
         app:layout_constraintStart_toStartOf="@+id/imviewBoard"
         app:layout_constraintTop_toTopOf="@+id/imviewBoard"
         app:srcCompat="@drawable/black" />
@@ -33,6 +35,7 @@
         android:layout_height="95dp"
         android:layout_marginStart="14.5dp"
         android:layout_marginTop="2.5dp"
+        android:onClick="clickTopMiddle"
         app:layout_constraintStart_toEndOf="@+id/imbtnTL"
         app:layout_constraintTop_toTopOf="@+id/imviewBoard"
         app:srcCompat="@drawable/black" />
@@ -43,6 +46,7 @@
         android:layout_height="95dp"
         android:layout_marginStart="14.5dp"
         android:layout_marginTop="2.5dp"
+        android:onClick="clickTopRight"
         app:layout_constraintStart_toEndOf="@+id/imbtnTM"
         app:layout_constraintTop_toTopOf="@+id/imviewBoard"
         app:srcCompat="@drawable/black" />
@@ -53,6 +57,7 @@
         android:layout_height="95dp"
         android:layout_marginStart="2.5dp"
         android:layout_marginTop="15dp"
+        android:onClick="clickMiddleLeft"
         app:layout_constraintStart_toStartOf="@+id/imviewBoard"
         app:layout_constraintTop_toBottomOf="@+id/imbtnTL"
         app:srcCompat="@drawable/black" />
@@ -63,9 +68,10 @@
         android:layout_height="95dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:onClick="clickMiddleMiddle"
         app:layout_constraintStart_toEndOf="@+id/imbtnML"
         app:layout_constraintTop_toBottomOf="@+id/imbtnTM"
-        app:srcCompat="@drawable/black" />
+        app:srcCompat="@drawable/o" />
 
     <ImageButton
         android:id="@+id/imbtnMR"
@@ -73,6 +79,7 @@
         android:layout_height="95dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:onClick="clickMiddleRight"
         app:layout_constraintStart_toEndOf="@+id/imbtnMM"
         app:layout_constraintTop_toBottomOf="@+id/imbtnTR"
         app:srcCompat="@drawable/black" />
@@ -83,6 +90,7 @@
         android:layout_height="95dp"
         android:layout_marginStart="2.5dp"
         android:layout_marginTop="15dp"
+        android:onClick="clickBottomLeft"
         app:layout_constraintStart_toStartOf="@+id/imviewBoard"
         app:layout_constraintTop_toBottomOf="@+id/imbtnML"
         app:srcCompat="@drawable/black" />
@@ -93,6 +101,7 @@
         android:layout_height="95dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:onClick="clickBottomMiddle"
         app:layout_constraintStart_toEndOf="@+id/imbtnBL"
         app:layout_constraintTop_toBottomOf="@+id/imbtnMM"
         app:srcCompat="@drawable/black" />
@@ -103,10 +112,32 @@
         android:layout_height="95dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:onClick="clickBottomRight"
         app:layout_constraintStart_toEndOf="@+id/imbtnBM"
         app:layout_constraintTop_toBottomOf="@+id/imbtnMR"
         app:srcCompat="@drawable/black" />
 
+    <TextView
+        android:id="@+id/txvCurrentPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/playerOnesTurn"
+        app:layout_constraintBottom_toTopOf="@+id/imviewBoard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnResetGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:onClick="clickResetButton"
+        android:text="@string/btnReset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

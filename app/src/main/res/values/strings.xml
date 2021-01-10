@@ -2,5 +2,9 @@
     <string name="app_name">Tic-Tac-Toe</string>
     <string name="btnVsAI">Vs. AI</string>
     <string name="btnVsHuman">Vs. Human</string>
+    <string name="btnReset">Reset</string>
+    <string name="errorText">This text shouldn\'t be visible</string>
+    <string name="playerOnesTurn">Player One\'s turn!</string>
+    <string name="playerTwosTurn">Player Two\'s turn!</string>
 
 </resources>

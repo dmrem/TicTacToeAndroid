@@ -12,7 +12,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.dmrem.tictactoe.MESSAGE";
+    public static final String OPPONENT_TYPE = "com.dmrem.tictactoe.OPPONENT_TYPE";
 
 
     @Override
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void StartVsHuman(View view){
         Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, "Human");
+        intent.putExtra(OPPONENT_TYPE, "Human");
         startActivity(intent);
     }
 }
